@@ -1,0 +1,58 @@
+name: baki_khata
+description: "বাকি খাতা — বাংলাদেশের ছোট দোকানদারদের জন্য Offline-first customer credit/debt management app"
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # State management
+  provider: ^6.1.2
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # Database (Phase 1 থেকে ব্যবহার শুরু হবে, এখনই dependency যোগ করা হলো)
+  sqflite: ^2.3.3+1
+  path: ^1.9.0
+  path_provider: ^2.1.4
+
+  # Formatting (তারিখ, সংখ্যা)
+  intl: ^0.19.0
+
+  # Backup/Restore (Phase 6 থেকে ব্যবহার শুরু হবে)
+  share_plus: ^10.0.0
+  file_picker: ^8.0.6
+
+  # Future reminder feature-এর ভিত্তি (Phase 7, এখন শুধু dependency)
+  flutter_local_notifications: ^17.2.2
+
+  cupertino_icons: ^1.0.8
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+
+  # NOTE: এই sandbox-এ ইন্টারনেট অ্যাক্সেস না থাকায় প্রকৃত ফন্ট ফাইল ডাউনলোড
+  # করে যোগ করা সম্ভব হয়নি। বাংলা ফন্ট (যেমন Hind Siliguri / Noto Sans Bengali)
+  # ব্যবহার করতে চাইলে .ttf ফাইল assets/fonts/ ফোল্ডারে রেখে নিচের
+  # অংশটুকু uncomment করে ফন্ট নাম বসাতে হবে। আপাতত system default font
+  # ব্যবহার করা হচ্ছে যা বাংলা ইউনিকোড সাপোর্ট করে।
+  #
+  # fonts:
+  #   - family: HindSiliguri
+  #     fonts:
+  #       - asset: assets/fonts/HindSiliguri-Regular.ttf
+  #       - asset: assets/fonts/HindSiliguri-Bold.ttf
+  #         weight: 700
+
+  # assets:
+  #   - assets/icons/
